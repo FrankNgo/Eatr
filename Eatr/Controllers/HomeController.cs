@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Eatr.Models;
 
 namespace Eatr.Controllers
 {
@@ -10,7 +12,8 @@ namespace Eatr.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            List<GithubRepo> repos = GithubRepo.GetTopStarred();
+            return View(repos);
         }
 
         public IActionResult About()
@@ -26,11 +29,5 @@ namespace Eatr.Controllers
 
             return View();
         }
-
-        public IActionResult Error()
-        {
-            return View();
-        }
     }
 }
-
