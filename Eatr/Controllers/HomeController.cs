@@ -12,7 +12,7 @@ namespace Eatr.Controllers
     {
         public IActionResult Index()
         {
-            List<GithubRepo> repos = GithubRepo.GetTopStarred();
+            List<YelpApi> repos = YelpApi.Recommend();
             return View(repos);
         }
 
