@@ -1,21 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@using Eatr.Models;
-@using System.Collections.Generic;
-@model List<YelpApi>
+@model Eatr.Models.YelpApi
+
 
 <center>
-    @foreach (YelpApi repo in Model)
-    {
+
         <div class="test">
-            <h3 class="text-center project-title text-capitalize">@repo.Name</h3>
-            <a class="btn btn-info" target="_blank" href="@repo.Html_Url">Take me to github!</a> <br />
-            <h5>@repo.Description</h5>
+            <h3 class="text-center project-title text-capitalize">@Model.name</h3>
+            @*<a class="btn btn-info" target="_blank" href="@repo.Html_Url">Take me to github!</a> <br />
+                <h5>@repo.Description</h5>*@
             <br /><br />
             <br />
         </div>
 
-
-    }
 </center>
