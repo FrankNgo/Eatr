@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Eatr.Models.YelpApi
+
+
+
+<center>
+    <link href="@Url.Content("~//Site.css")" rel="stylesheet" type="text/css" />
+
+    <h2>You Should Eat at</h2>
+    <div class="test">
+        <h3 class="text-center project-title text-capitalize">@Model.name</h3>
+        <img src="@Model.image_url" alt="Alternate Text" />
+        <h3 class="text-center project-title text-capitalize">Phone: @Model.phone</h3>
+        <h3 class="text-center project-title text-capitalize">Price: @Model.price</h3>
+
+        <br /><br />
+        <br />
+    </div>
+
+</center>
