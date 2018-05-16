@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #ABB2B9;
 }
 
 /* Wrapping element */
@@ -41,14 +42,25 @@ img{
     max-width: 50%;
 }
 
-.mainForm{
+.mainForm {
     height: 500px;
     width: 500px;
-    background-color:aquamarine;
-    border-radius: 25px;    
+    background-color: #F1948A;
+    border-radius: 25px;
 }
 
 h2{
     padding-top: 20px;
     font-size: 70px;
+}
+
+.eatButton{
+    font-size: 20px;
+    background-color: white;
+}
+
+.box2{
+    width: 180px;
+    height: 30px;
+    border-radius: 25px;
 }

@@ -12,6 +12,11 @@ namespace Eatr.Controllers
     {
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult Eatr()
+        {
             YelpApi repos = YelpApi.Recommend();
             return View(repos);
         }
