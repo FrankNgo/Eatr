@@ -1,0 +1,43 @@
+﻿
+@model Eatr.Models.YelpApi
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+<center>
+    <div class="mainForm">
+
+        <h2>Eatr</h2>
+        @using (Html.BeginForm())
+    {
+        <label>Are there any places or types of places you want us to make sure you dont get?</label><br /> <br />
+        <label>1.</label>
+        <input type="text" placeholder="  "> <br /><br />
+        <label>2.</label>
+        <input type="text" placeholder="  "> <br /><br />
+        <label>3.</label>
+        <input type="text" placeholder="  "> <br /><br />
+        <label>4.</label>
+        <input type="text" placeholder="  "> <br /><br />
+        <label>5.</label>
+        <input type="text" placeholder="  "> <br /><br />
+
+
+        <br /><br /><br />
+        @*<input type="submit" value="Lets Eat" />*@
+}
+        <button class="optionButton">@Html.ActionLink("Previous", "Param7", "Home")</button>
+        <button class="optionButton">@Html.ActionLink("Start Over", "Index")</button>
+        <button class="optionButton">@Html.ActionLink("Lets Eat!", "Result", "Home")</button>
+        <br /><br />
+    </div>
+
+</center>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

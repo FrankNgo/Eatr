@@ -20,7 +20,9 @@ namespace Eatr.Models
         public string display_phone { get; set; }
         public string price { get; set; }
         public string rating { get; set; }
-
+        public string url { get; set; }
+        public string address1 { get; set; }
+      
         public string searchWord { get; set; }
         public string From { get; set; }
         public string Body { get; set; }
@@ -43,7 +45,7 @@ namespace Eatr.Models
             });
         }
 
-        public static YelpApi Recommend(string searchWord)
+        public static YelpApi Recommend()
         {
 
             var client = new RestClient();
@@ -52,7 +54,7 @@ namespace Eatr.Models
 
             var request = new RestRequest();
             request.AddHeader("Authorization","Bearer _l4M0A_gWgknLXhScqC6gzMQMrsvyU9xLCa3siFYWD5qGD6Rkr1-x23V5nch_nLIz5ok5Xxyr5J0XKqAurr_0rHMcHzGkJ6SheksKfH2K5_QT54cVkfbxCZ8EXLzWnYx");
-            request.Resource = "/v3/businesses/" + searchWord;
+            request.Resource = "/v3/businesses/momo-portland";
 
         
 

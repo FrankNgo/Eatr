@@ -1,0 +1,36 @@
+﻿
+@model Eatr.Models.YelpApi
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+<center>
+    <div class="mainForm">
+
+        <h2>Eatr</h2>
+        @using (Html.BeginForm())
+    {
+
+        <label>What kind of food do you want to eat?</label><br />
+        <select id="leadType" class="box2" name="lead_type">
+            <option value="1">American</option>
+            <option value="1">Chinese</option>
+            <option value="2">Indian</option>
+            <option value="3">Thai</option>
+        </select><br />
+
+
+        <br /><br /><br /><br />
+        @*<input type="submit" value="Lets Eat" />*@
+}
+        <button class="optionButton">@Html.ActionLink("Next", "Param7", "Home")</button>
+        <button class="optionButton">@Html.ActionLink("Previous", "Param5", "Home")</button>
+        <button class="optionButton">@Html.ActionLink("Start Over", "Index")</button>
+        <button class="optionButton">@Html.ActionLink("Lets Eat!", "Result", "Home")</button>
+        <br /><br />
+    </div>
+
+</center>
+

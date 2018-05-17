@@ -19,8 +19,12 @@
             <h3 class="text-center project-title text-capitalize">Phone: @Model.display_phone</h3>
             <h3 class="text-center project-title text-capitalize">Price: @Model.price</h3>
             <h3 class="text-center project-title text-capitalize">Rating: @Model.rating</h3>
-
-            <br /><br />
+    
+            <br />
+            <button class="optionButton"><a href="@Model.url">Website </a></button>
+            <button class="optionButton">@Html.ActionLink("Directions", "Index")</button>
+            <button class="optionButton">@Html.ActionLink("Start Over", "Index")</button>
+            <br />
             <br />
         </div>
     </div>

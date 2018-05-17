@@ -17,7 +17,7 @@ namespace Eatr.Controllers
 
         public IActionResult Result()
         {
-            YelpApi repos = YelpApi.Recommend(Request.Query["searchWord"]);
+            YelpApi repos = YelpApi.Recommend();
             return View(repos);
         }
 
@@ -45,6 +45,39 @@ namespace Eatr.Controllers
         {
             newSearch.Send();
             return RedirectToAction("Result");
+        }
+
+        public IActionResult Param1()
+        {
+            return View();
+        }
+        public IActionResult Param2()
+        {
+            return View();
+        }
+        public IActionResult Param3()
+        {
+            return View();
+        }
+        public IActionResult Param4()
+        {
+            return View();
+        }
+        public IActionResult Param5()
+        {
+            return View();
+        }
+        public IActionResult Param6()
+        {
+            return View();
+        }
+        public IActionResult Param7()
+        {
+            return View();
+        }
+        public IActionResult Param8()
+        {
+            return View();
         }
 
 
