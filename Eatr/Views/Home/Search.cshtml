@@ -1,0 +1,57 @@
+﻿
+@model Eatr.Models.YelpApi
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+    <center>
+        <div class="mainForm">
+
+            <h2>Eatr</h2>
+            @using (Html.BeginForm())
+    {
+        @*<label>How many people are in your party?</label><br />
+    <select id="leadType" class="box2" name="lead_type">
+        <option value="2">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="3">4</option>
+        <option value="3">5</option>
+        <option value="3">6</option>
+        <option value="3">7+</option>
+    </select><br />
+    <label>How much do you want to spend?</label><br />
+    <select id="leadType" class="box2" name="lead_type">
+        <option value="1">$</option>
+        <option value="2">$$</option>
+        <option value="3">$$$</option>
+        <option value="3">$$$$</option>
+        <option value="3">$$$$$</option>
+    </select><br />
+    <label>What kind of food do you want to eat?</label><br />
+    <select id="leadType" class="box2" name="lead_type">
+        <option value="1">American</option>
+        <option value="1">Chinese</option>
+        <option value="2">Indian</option>
+        <option value="3">Thai</option>
+    </select><br />
+    <label>Walking, Driving, Or Delivey?</label><br />
+    <select id="leadType" class="box2" name="lead_type">
+        <option value="1">Walking</option>
+        <option value="2">Driving</option>
+        <option value="3">Delivey</option>
+    </select><br />*@
+
+        <label for="searchWord">Search for word</label>
+        <input id="searchWord" name="searchWord" type="text">
+
+        <br /><br /><br /><br /><br /><br />
+        <input type="submit" value="Send!" />
+}
+
+        </div>
+
+    </center>
+
