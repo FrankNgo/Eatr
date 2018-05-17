@@ -15,24 +15,22 @@ namespace Eatr.Controllers
             return View();
         }
 
+        //public IActionResult Eatr()
+        //{
+        //    YelpApi repos = YelpApi.Recommend();
+        //    return View(repos);
+        //}
+
         public IActionResult Eatr()
         {
-            YelpApi repos = YelpApi.Recommend();
-            return View(repos);
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
-        public IActionResult Contact()
+        [HttpPost]
+        public IActionResult Eatr(YelpApi newSearch)
         {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            newSearch.SearchParams();
+            return RedirectToAction("Eatr");
         }
     }
 }

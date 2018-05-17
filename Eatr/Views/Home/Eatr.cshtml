@@ -1,20 +1,27 @@
 ﻿
+
 @model Eatr.Models.YelpApi
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 
 
 <center>
-    
+    <div class="mainForm">
 
-    <h2>You Should Eat at</h2>
-    <div class="test">
-        <h3 class="text-center project-title text-capitalize">@Model.name</h3>
-        <img src="@Model.image_url" alt="Alternate Text" />
-        <h3 class="text-center project-title text-capitalize">Phone: @Model.phone</h3>
-        <h3 class="text-center project-title text-capitalize">Price: @Model.price</h3>
+        <h2>You Should Try</h2>
+        <div class="test">
+            <h3 class="text-center project-title text-capitalize">@Model.name</h3>
+            <img src="@Model.image_url" alt="Alternate Text" />
 
-        <br /><br />
-        <br />
+            <h3 class="text-center project-title text-capitalize">Phone: @Model.display_phone</h3>
+            <h3 class="text-center project-title text-capitalize">Price: @Model.price</h3>
+            <h3 class="text-center project-title text-capitalize">Rating: @Model.rating</h3>
+
+            <br /><br />
+            <br />
+        </div>
     </div>
-
 </center>

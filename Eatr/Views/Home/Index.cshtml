@@ -3,25 +3,25 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-<center>
-    <div class="mainForm">
 
-        <h2>Eatr</h2>
+    <center>
+        <div class="mainForm">
 
+            <h2>Eatr</h2>
+            @using (Html.BeginForm())
+    {
         <label>How many people are in your party?</label><br />
         <select id="leadType" class="box2" name="lead_type">
             <option value="2">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
-            <option value="3">3</option>
-            <option value="3">3</option>
-            <option value="3">3</option>
-            <option value="3">3</option>
-            <option value="3">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+            <option value="3">6</option>
+            <option value="3">7+</option>
         </select><br />
-
-
         <label>How much do you want to spend?</label><br />
         <select id="leadType" class="box2" name="lead_type">
             <option value="1">$</option>
@@ -29,74 +29,25 @@
             <option value="3">$$$</option>
             <option value="3">$$$$</option>
             <option value="3">$$$$$</option>
-
         </select><br />
-
         <label>What kind of food do you want to eat?</label><br />
         <select id="leadType" class="box2" name="lead_type">
             <option value="1">American</option>
+            <option value="1">Chinese</option>
             <option value="2">Indian</option>
             <option value="3">Thai</option>
         </select><br />
-
         <label>Walking, Driving, Or Delivey?</label><br />
         <select id="leadType" class="box2" name="lead_type">
             <option value="1">Walking</option>
             <option value="2">Driving</option>
             <option value="3">Delivey</option>
         </select><br />
+        <br /><br /><br /><br /><br /><br />
+        <input type="submit" value="Send!" />
+}
 
-
-        <div class="buttonEatr">
-            <a asp-area="" asp-controller="Home" asp-action="Eatr" class="eatButton">Lets Eat!</a>
         </div>
 
-
-        <p id="demo">Click the button to get your position.</p>
-
-        <button onclick="getLocation()">Try It</button>
-
-        <div id="mapholder"></div>
-
-        <script>
-            var x = document.getElementById("demo");
-
-            function getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition, showError);
-                } else {
-                    x.innerHTML = "Geolocation is not supported by this browser.";
-                }
-            }
-
-            function showPosition(position) {
-                var latlon = position.coords.latitude + "," + position.coords.longitude;
-                var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
-                    + latlon + "&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
-                document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
-            }
-            //To use this code on your website, get a free API key from Google.
-            //Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
-
-            function showError(error) {
-                switch (error.code) {
-                    case error.PERMISSION_DENIED:
-                        x.innerHTML = "User denied the request for Geolocation."
-                        break;
-                    case error.POSITION_UNAVAILABLE:
-                        x.innerHTML = "Location information is unavailable."
-                        break;
-                    case error.TIMEOUT:
-                        x.innerHTML = "The request to get user location timed out."
-                        break;
-                    case error.UNKNOWN_ERROR:
-                        x.innerHTML = "An unknown error occurred."
-                        break;
-                }
-            }
-        </script>
-
-    </div>
-
-</center>
+    </center>
 
